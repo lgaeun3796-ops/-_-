@@ -1,0 +1,484 @@
+body {
+    font-family: Pretendard, sans-serif;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+}
+
+main section {
+    width: 100%;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+.menu {
+    width: 100%;
+    padding: 40px 150px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.logo {
+    width: 100px;
+}
+
+.symbol {
+    width: 70px;
+}
+
+.menu img {
+    width: 100%;
+    display: block;
+}
+
+/* 메뉴 목록 AI 사용 */
+.menu nav {
+    display: flex;
+    gap: clamp(15px, 10vw, 150px);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu nav a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.lang {
+    width: 80px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.lang_top {
+    width: 200%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang_line {
+    width: 200%;
+    height: 2px;
+    background-color: #fff;
+    /* AI 사용 */
+    margin-top: 2px;
+}
+
+.gradient {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.81) 100%);
+}
+
+.visual {
+    width: 100%;
+    display: flex;
+}
+
+.visual img {
+    width: 100%;
+    display: block;
+}
+
+.visual .twimi {
+    display: none;
+}
+
+.intro {
+    height: 800px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0645D8;
+}
+
+.intro_text h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.intro_text p {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* about */
+.about {
+    padding: 80px 300px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.about_title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 65px;
+}
+
+.about_title h2,
+.about_text h2 {
+    color: #0145D8;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.about_logo {
+    width: 90px;
+}
+
+.about_logo img {
+    width: 100%;
+    display: block;
+}
+
+.about_content {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.about_img,
+.about_text {
+    width: 50%;
+    position: relative;
+}
+
+.about_img>img {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about_text h2 {
+    margin-bottom: 20px;
+}
+
+.about_info {
+    margin-bottom: 65px;
+}
+
+.about_info p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px 6px;
+    border-bottom: 2px dashed #0145D8;
+}
+
+.about_desc p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+
+.about_text strong {
+    color: #0145D8;
+}
+
+.about_sticker {
+    position: absolute;
+}
+
+.about_sticker img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.about_sticker_1 {
+    width: 105px;
+    top: -5px;
+    right: 110px;
+    transform: rotate(-10deg);
+}
+
+.about_sticker_2 {
+    width: 120px;
+    top: 45px;
+    right: 0;
+    transform: rotate(12deg);
+}
+
+.about_sticker_3 {
+    width: 190px;
+    bottom: -20px;
+    left: -70px;
+    transform: rotate(25deg);
+}
+
+/* members */
+.members {
+    padding: 100px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.members>h2 {
+    color: #0145D8;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 200px 0 70px;
+    padding: 0 300px;
+}
+
+/* 멤버 슬라이더 AI 사용 */
+.member_view {
+    width: 100%;
+    height: 480px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.member_view::-webkit-scrollbar {
+    display: none;
+}
+
+.member_track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* ai 도움 */
+.member_card {
+    width: 350px;
+    flex: 0 0 350px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.5s ease, flex-basis 0.5s ease;
+}
+
+.member_photo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.member_photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.member_detail {
+    display: none;
+}
+
+/* 선택된 멤버 카드 ai 사용 */
+.member_card.active {
+    flex: 0 0 800px;
+    height: 440px;
+    display: flex;
+    padding: 18px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(1, 69, 216, 1) 50%, rgba(99, 150, 255, 1) 100%);
+}
+
+.member_card.active .member_photo {
+    width: 48%;
+    height: 100%;
+}
+
+.member_card.active .member_photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.member_card.active .member_detail {
+    display: flex;
+    flex: 1;
+    margin-left: 16px;
+    margin-right: 5px;
+    height: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+.member_info {
+    width: 100%;
+}
+
+.member_logo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.member_info h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+.member_data p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 1.3;
+    padding: 8px 0;
+    margin: 0;
+    border-bottom: 2px dashed #fff;
+}
+
+.member_data span {
+    display: block;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.member_sign {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.member_sign img {
+    width: 60%;
+    display: block;
+    opacity: 0.6;
+}
+
+/* album */
+.album {
+    margin: 300px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.album_head {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 200px 140px 70px;
+}
+
+.album_head h2,
+.media_head h2 {
+    color: #0145D8;
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: 160px;
+}
+
+.album_sort {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+}
+
+.album_view {
+    width: 100%;
+    overflow: hidden;
+}
+
+.album_list {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.album_row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+}
+
+.album_card {
+    width: 310px;
+    height: 310px;
+    flex: 0 0 310px;
+}
+
+.album_card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+/* media */
+.media {
+    width: 100%;
+    padding: 0 0 100px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.media_head {
+    display: block;
+}
+
+.media_head h2 {
+    color: #0145D8;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 200px 0 70px;
+    padding: 0 300px;
+}
+
+.media_buttons {
+    display: flex;
+    gap: 15px;
+    padding: 0 300px;
+    margin: 0 0 16px;
+}
+
+.media_buttons button {
+    padding: 12px 26px;
+    font-family: Pretendard, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0145D8;
+    background-color: #fff;
+    border: 1px solid #0145D8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.media_buttons button:hover {
+    color: #fff;
+    background-color: #0145D8;
+}
